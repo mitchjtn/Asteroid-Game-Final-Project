@@ -1,0 +1,9 @@
+linked list >>> adjacency list
+
+linked list :
+1. single linked list
+2. double linked list
+
+8queens problem	> bisa bruteforce
+		> dancing link algorithm
+
