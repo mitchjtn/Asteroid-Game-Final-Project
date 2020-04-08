@@ -13,14 +13,18 @@ public class SpaceshipControls : MonoBehaviour
     public float screenBottom = -21f;
     public float screenRight = 36f;
     public float screenLeft = -36f;
-
+    public bool invul;
     public int score;
     public int lives;
 
     public Text scoreText;
     public Text livesText;
+    public GameObject gameOverPanel;
 
     private Rigidbody2D rb;
+
+    public Color inColor;
+    public Color normalColor;
 
     Vector2 movement;
 
@@ -28,10 +32,13 @@ public class SpaceshipControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         score = 0;
-        lives = 3;
+        //lives = 3;
 
         scoreText.text = "Score : " + score;
         livesText.text = "Lives : " + lives;
+
+        invul = true;
+        Respawn();
     }
 
 
@@ -75,6 +82,24 @@ public class SpaceshipControls : MonoBehaviour
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    public void Respawn()
+    {
+        rb.velocity = Vector2.zero;
+        transform.position = Vector2.zero;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.enabled = true;
+        sr.color = inColor;
+        Invoke("Invulnerable", 4f);
+    }
+
+    public void Invulnerable()
+    {
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<SpriteRenderer>().color = normalColor;
+        invul = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.relativeVelocity.magnitude);
@@ -83,11 +108,27 @@ public class SpaceshipControls : MonoBehaviour
             Debug.Log("Death");
             lives--;
             livesText.text = "Lives : " + lives;
-            if(lives <= 0)
+
+            //respawn
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            invul = true;
+            Invoke("Respawn", 2f);
+
+            if (lives <= 0)
             {
                 //GameOver
+                GameOver();
+                gameOverPanel.SetActive(true);
             }
+
+            
         }
+    }
+
+    public void GameOver()
+    {
+        CancelInvoke();
     }
 
     public void scorePoints(int points)

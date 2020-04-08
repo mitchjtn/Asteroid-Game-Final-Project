@@ -161,7 +161,7 @@ MonoBehaviour:
   asteroidSmall: {fileID: 807708251196913511}
   player: {fileID: 0}
   points: 25
-  screenTop: 25
-  screenBottom: -25
+  screenTop: 20.5
+  screenBottom: -20.5
   screenRight: 36
   screenLeft: -36
