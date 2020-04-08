@@ -7,12 +7,18 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     private float bulletForce = 50f;
-    
-   
+
+    SpaceshipControls sc;
+
+    private void Start()
+    {
+        sc = GetComponent<SpaceshipControls>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && sc.invul == false)
         {
             Shoot();
         }

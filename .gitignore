@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Library/ArtifactDB
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+Library/SourceAssetDB

@@ -21,7 +21,8 @@ public class Asteroid : MonoBehaviour
     public float screenBottom = -27f;
     public float screenRight = 37f;
     public float screenLeft = -37f;
-    
+
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Asteroid : MonoBehaviour
         rb.AddTorque(torque);
 
         player = GameObject.FindWithTag("Player");
+        gm = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -78,16 +80,19 @@ public class Asteroid : MonoBehaviour
                 //spawn 2 medium asteroid
                 Instantiate(asteroidMedium, transform.position, transform.rotation);
                 Instantiate(asteroidMedium, transform.position, transform.rotation);
+                gm.UpdateNumberofAsteroid(1);
             }
             else if(asteroidSize == 2) //medium asteroid
             {
                 //spawn 2 small asteroid
                 Instantiate(asteroidSmall, transform.position, transform.rotation);
                 Instantiate(asteroidSmall, transform.position, transform.rotation);
+                gm.UpdateNumberofAsteroid(1);
             }
             else if(asteroidSize == 1) //small asteroid
             {
                 //destroy the asteroid
+                gm.UpdateNumberofAsteroid(-1);
             }
 
             //update score

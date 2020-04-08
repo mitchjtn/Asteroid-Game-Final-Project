@@ -156,6 +156,14 @@ MonoBehaviour:
   screenBottom: -20
   screenRight: 35
   screenLeft: -35
+  invul: 0
+  score: 0
+  lives: 3
+  scoreText: {fileID: 0}
+  livesText: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  inColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &6101501776161759784
 MonoBehaviour:
   m_ObjectHideFlags: 0
