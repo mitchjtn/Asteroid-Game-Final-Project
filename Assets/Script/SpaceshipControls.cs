@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpaceshipControls : MonoBehaviour
 {
     public float moveSpeed =  50f;
     public float turnSpeed = -40f;
-    public float deathForce = 7f;
+    public float deathForce = 5f;
 
     public float screenTop = 21f;
     public float screenBottom = -21f;
     public float screenRight = 36f;
     public float screenLeft = -36f;
 
+    public int score;
+    public int lives;
+
+    public Text scoreText;
+    public Text livesText;
 
     private Rigidbody2D rb;
 
@@ -21,7 +27,14 @@ public class SpaceshipControls : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        score = 0;
+        lives = 3;
+
+        scoreText.text = "Score : " + score;
+        livesText.text = "Lives : " + lives;
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -65,9 +78,21 @@ public class SpaceshipControls : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.relativeVelocity.magnitude);
-        if(collision.relativeVelocity.magnitude > deathForce)
+        if(collision.relativeVelocity.sqrMagnitude > deathForce * deathForce)
         {
             Debug.Log("Death");
+            lives--;
+            livesText.text = "Lives : " + lives;
+            if(lives <= 0)
+            {
+                //GameOver
+            }
         }
+    }
+
+    public void scorePoints(int points)
+    {
+        score += points;
+        scoreText.text = "Score : " + score;
     }
 }

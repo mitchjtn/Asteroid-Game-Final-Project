@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    private float maxThrust = 11000f;
-    private float maxTorque = 5000f;
+    public float maxThrust = 11000f;
+    public float maxTorque = 5000f;
     private Vector2 thrust;
     private float torque;
     public Rigidbody2D rb;
@@ -14,6 +14,8 @@ public class Asteroid : MonoBehaviour
     public GameObject asteroidMedium;
     public GameObject asteroidSmall;
 
+    public GameObject player;
+    public int points;
 
     public float screenTop = 27f;
     public float screenBottom = -27f;
@@ -30,6 +32,8 @@ public class Asteroid : MonoBehaviour
 
         rb.AddForce(thrust);
         rb.AddTorque(torque);
+
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -72,19 +76,24 @@ public class Asteroid : MonoBehaviour
             if(asteroidSize == 3) //large Asteroid
             {
                 //spawn 2 medium asteroid
-                GameObject asteroid1 = Instantiate(asteroidMedium, transform.position, transform.rotation);
-                GameObject asteroid2 = Instantiate(asteroidMedium, transform.position, transform.rotation);
-     
-                Destroy(gameObject);
+                Instantiate(asteroidMedium, transform.position, transform.rotation);
+                Instantiate(asteroidMedium, transform.position, transform.rotation);
             }
             else if(asteroidSize == 2) //medium asteroid
             {
                 //spawn 2 small asteroid
+                Instantiate(asteroidSmall, transform.position, transform.rotation);
+                Instantiate(asteroidSmall, transform.position, transform.rotation);
             }
             else if(asteroidSize == 1) //small asteroid
             {
                 //destroy the asteroid
             }
+
+            //update score
+            player.SendMessage("scorePoints", points);
+
+            Destroy(gameObject);
         }
         
     }
