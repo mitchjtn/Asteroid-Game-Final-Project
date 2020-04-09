@@ -18,7 +18,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && sc.invul == false)
+        if ((Input.GetKeyDown(KeyCode.Mouse0) ) && sc.invul == false)
         {
             Shoot();
         }

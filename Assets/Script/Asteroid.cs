@@ -22,7 +22,7 @@ public class Asteroid : MonoBehaviour
     public float screenRight = 37f;
     public float screenLeft = -37f;
 
-    public GameManager gm;
+    public GameManagerScript gm;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class Asteroid : MonoBehaviour
         rb.AddTorque(torque);
 
         player = GameObject.FindWithTag("Player");
-        gm = GameObject.FindObjectOfType<GameManager>();
+        gm = GameObject.FindObjectOfType<GameManagerScript>();
     }
 
     // Update is called once per frame
