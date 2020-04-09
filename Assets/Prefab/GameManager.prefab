@@ -43,4 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405a398e24a6d424d84f9ebed235f1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numAsteroid: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  curNumAsteroid: 0
+  level: 0
+  asteroidLarge: {fileID: 7319407076349965282, guid: b49f63a6227d2984aa567685c943932b,
+    type: 3}
+  asteroidMedium: {fileID: 1769286405220795487, guid: efdb8bd5f6c45624dbe4241d4b781743,
+    type: 3}
+  asteroidSmall: {fileID: 807708251196913511, guid: 7d94e1660e13f7a499fdc796cb5cddbe,
+    type: 3}
+  waveNow: 1
+  textLevel: {fileID: 0}
