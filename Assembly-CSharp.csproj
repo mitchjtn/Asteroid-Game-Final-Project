@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Asteroid.cs" />
     <Compile Include="Assets\Script\BulletScript.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Shooting.cs" />
     <Compile Include="Assets\Script\SpaceshipControls.cs" />
+    <None Include="Assets\Font\gabriele_bad_ah\gabriele.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
