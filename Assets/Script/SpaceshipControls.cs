@@ -1,32 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SpaceshipControls : MonoBehaviour
 {
     public float moveSpeed =  50f;
     public float turnSpeed = -40f;
+    Vector2 movement;
+
     public float deathForce = 5f;
+
+    public bool invul;
+    public int score;
+    public int lives;
 
     public float screenTop = 21f;
     public float screenBottom = -21f;
     public float screenRight = 36f;
     public float screenLeft = -36f;
-    public bool invul;
-    public int score;
-    public int lives;
 
     public Text scoreText;
     public Text livesText;
     public GameObject gameOverPanel;
+    public GameObject newHighScorePanel;
+    public InputField highScoreInput;
+    public Text highScoreListText;
+    public GameManager gm;
 
     private Rigidbody2D rb;
 
     public Color inColor;
     public Color normalColor;
-
-    Vector2 movement;
 
     void Start()
     {
@@ -119,16 +125,40 @@ public class SpaceshipControls : MonoBehaviour
             {
                 //GameOver
                 GameOver();
-                gameOverPanel.SetActive(true);
             }
-
-            
         }
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("Game");
     }
 
     public void GameOver()
     {
         CancelInvoke();
+        
+        if(gm.CheckForHighScore(score))
+        {
+            newHighScorePanel.SetActive(true);
+        }
+        else
+        {
+            highScoreListText.text = "HIGH SCORE " + "\n\n" + PlayerPrefs.GetString("highscoreName") + "  " + PlayerPrefs.GetInt("highscore");
+            gameOverPanel.SetActive(true);
+        }
+    }
+
+    public void HighScoreInput()
+    {
+        string newInput = highScoreInput.text;
+        Debug.Log(newInput);
+        newHighScorePanel.SetActive(false);
+        gameOverPanel.SetActive(true);
+
+        PlayerPrefs.SetString("highscoreName", newInput);
+        PlayerPrefs.SetInt("highscore", score);
+        highScoreListText.text = "HIGH SCORE" + "\n\n" + PlayerPrefs.GetString("highscoreName") + "  " + PlayerPrefs.GetInt("highscore");
     }
 
     public void scorePoints(int points)

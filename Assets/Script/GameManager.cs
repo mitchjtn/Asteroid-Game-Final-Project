@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
@@ -50,9 +51,9 @@ public class GameManager : MonoBehaviour
         level++;
         textLevel.enabled= true;
         textLevel.text = "Level " + level;
-        Invoke("disableTextLevel", 3f);
+        Invoke("disableTextLevel", 3.5f);
 
-        Invoke("SpawnAsteroid", 3f);
+        Invoke("SpawnAsteroid", 4f);
        
     }
 
@@ -90,4 +91,22 @@ public class GameManager : MonoBehaviour
         }
 
     } 
+
+    public bool CheckForHighScore(int score)
+    {
+        Debug.Log("highscore");
+        int highScore = PlayerPrefs.GetInt("highscore");
+        if(score > highScore)
+        {
+            Debug.Log("new highscore");
+            return true;
+        }
+        return false;
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 }
