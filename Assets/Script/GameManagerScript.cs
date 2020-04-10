@@ -11,14 +11,20 @@ public class GameManagerScript : MonoBehaviour
     public GameObject asteroidMedium;
     public GameObject asteroidSmall;
 
-    private static int[] spawnLargeAsteroid = { 0, 1, 1, 1, 1, 2,    2, 2, 2, 2, 3,   3, 3, 3, 3, 3,   15 };  
-    private static int[] spawnMediumAsteroid = { 0, 2, 2, 2, 3, 3,   3, 3, 4, 4, 4,   4, 4, 5, 5, 5,   15 }; 
-    private static int[] spawnSmallAsteroid = { 0, 3, 4, 4, 5, 5,    3, 4, 4, 5, 5,   4, 5, 5, 6, 6,   15 };   
-    private static float[] cooldown = { 0f,10f,10f,10f,10f,10f     ,9f,9f,9f,9f,9f,   8f,8f,8f,8f,8f,  5f};  
-    private static int[] wave =              { 0, 5, 5, 5, 5, 5,     7, 7, 7, 7, 7,   9, 9, 9, 9, 100,  10};                 
-    public int waveNow = 1;
+    private static int[] spawnLargeAsteroid = { 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 15 };
+    private static int[] spawnMediumAsteroid = { 0, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 15 };
+    private static int[] spawnSmallAsteroid = { 0, 3, 4, 4, 5, 5, 3, 4, 4, 5, 5, 4, 5, 5, 6, 6, 15 };
+    private static float[] cooldown = { 0f, 13f, 13f, 13f, 13f, 13f, 9f, 9f, 9f, 9f, 9f, 8f, 8f, 8f, 8f, 8f, 5f };
+    private static int[] wave = { 0, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 9, 9, 9, 9, 100, 10 };
+    private int maxAsteroidinScreen = 30;
 
     public int maxLevel;
+    private int maxAsteroidPerLevel;
+    private int asteroidLevelNow = 0;
+
+    public GameObject star;
+    public int starNow;
+
 
     public Text textLevel;
 
@@ -33,20 +39,38 @@ public class GameManagerScript : MonoBehaviour
     {
         // LevelObject = GameObject.FindGameObjectsWithTag("Level");
         player = GameObject.FindGameObjectWithTag("Player");
-        
+
         StartNewLevel();
+        Invoke("SpawnStar", Random.Range(2f, 7f));
     }
+
+    public void updateStar(int change)
+    {
+        starNow += change;
+        if (starNow == 0)
+        {
+            Invoke("SpawnStar", Random.Range(7f, 15f));
+        }
+    }
+
+    public void SpawnStar()
+    {
+        starNow++;
+        Vector2 spawnPosition = new Vector2(Random.Range(-33f, 33f), Random.Range(-18f, 18f));
+        Instantiate(star, spawnPosition, Quaternion.identity);
+    }
+
 
     public void UpdateNumberofAsteroid(int change)
     {
         curNumAsteroid += change;
 
         //check if there is no asteroid left
-        if (curNumAsteroid == 0 && waveNow == wave[level])
+        if (curNumAsteroid == 0 && asteroidLevelNow == maxAsteroidPerLevel)
         {
 
             //new Level
-            waveNow = 1;
+            
             StartNewLevel();
         }
     }
@@ -60,6 +84,9 @@ public class GameManagerScript : MonoBehaviour
     public void StartNewLevel()
     {
         level++;
+        maxAsteroidPerLevel = wave[level] * (spawnLargeAsteroid[level] + spawnMediumAsteroid[level] + spawnSmallAsteroid[level]);
+        asteroidLevelNow = 0;
+        maxAsteroidinScreen = (int)(maxAsteroidinScreen * 1.2f);
         textLevel.enabled = true;
         textLevel.text = "Level " + level;
         Invoke("disableTextLevel", 3.5f);
@@ -87,16 +114,18 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    
     IEnumerator Spawn(GameObject asteroid, float delay)
     {
+        yield return new WaitForSeconds(Random.Range(0f, 7f));
         for (int i = 1; i <= wave[level]; i++)
         {
-
-            Vector2 spawnPosition = new Vector2(Random.Range(-35.9f, 35.9f), 20f);
-            Instantiate(asteroid, spawnPosition, Quaternion.identity);
+            while (curNumAsteroid >= maxAsteroidinScreen) yield return null;
             UpdateNumberofAsteroid(1);
+            Vector2 spawnPosition = new Vector2(Random.Range(-35.9f, 35.9f), 30f);
+            Instantiate(asteroid, spawnPosition, Quaternion.identity);
             //Debug.Log("Spawn Asteroid");
-            waveNow = i;
+            asteroidLevelNow++;
 
             yield return new WaitForSeconds(delay);
         }
@@ -126,7 +155,7 @@ public class GameManagerScript : MonoBehaviour
         PlayerPrefs.SetString("highscoreName", newInput);
         player.SendMessage("SetNewHighScore");
         highScoreListText.text = "HIGH SCORE" + "\n\n" + PlayerPrefs.GetString("highscoreName") + "  " + PlayerPrefs.GetInt("highscore");
-        
+
     }
 
     public bool CheckForHighScore(int score)
