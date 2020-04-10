@@ -162,10 +162,6 @@ MonoBehaviour:
   screenLeft: -35
   scoreText: {fileID: 0}
   livesText: {fileID: 0}
-  gameOverPanel: {fileID: 0}
-  newHighScorePanel: {fileID: 0}
-  highScoreInput: {fileID: 0}
-  highScoreListText: {fileID: 0}
   gm: {fileID: 0}
   cam: {fileID: 0}
   inColor: {r: 1, g: 1, b: 1, a: 0.50980395}
@@ -184,6 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 496292712587507134, guid: a871aa780919ab84aa0d9a1253a1042d, type: 3}
   firePoint: {fileID: 519623074206865057}
+  delay: 0.25
+  shootTime: 0
 --- !u!60 &519623073759446736
 PolygonCollider2D:
   m_ObjectHideFlags: 0

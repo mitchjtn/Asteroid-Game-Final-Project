@@ -6,7 +6,7 @@ public class Asteroid : MonoBehaviour
 {
     public float maxThrust = 11000f;
     public float maxTorque = 5000f;
-    private float gayaPecah = 7f;
+    private float splitForce = 7f;
     private Vector2 thrust;
     private float torque;
     public Rigidbody2D rb;
@@ -81,15 +81,15 @@ public class Asteroid : MonoBehaviour
             if(asteroidSize == 3) //large Asteroid
             {
                 //spawn 2 medium asteroid
-                Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * gayaPecah, ForceMode2D.Impulse);
-                Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * gayaPecah, ForceMode2D.Impulse);
+                Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
+                Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
                 gm.UpdateNumberofAsteroid(1);
             }
             else if(asteroidSize == 2) //medium asteroid
             {
                 //spawn 2 small asteroid
-                Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * gayaPecah, ForceMode2D.Impulse); 
-                Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * gayaPecah, ForceMode2D.Impulse);
+                Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse); 
+                Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
                 gm.UpdateNumberofAsteroid(1);
             }
             else if(asteroidSize == 1) //small asteroid
