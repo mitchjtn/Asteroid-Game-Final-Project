@@ -494,6 +494,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 789218973248993213, guid: adee4bf6f46d7474596e84d0b951be29,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 789218973497107572, guid: adee4bf6f46d7474596e84d0b951be29,
         type: 3}
       propertyPath: m_IsActive
@@ -504,6 +509,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 789218974140981405, guid: adee4bf6f46d7474596e84d0b951be29,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 789218974646474384, guid: adee4bf6f46d7474596e84d0b951be29,
         type: 3}
       propertyPath: m_Name
@@ -653,6 +663,8 @@ MonoBehaviour:
   asteroidSmall: {fileID: 807708251196913511, guid: 7d94e1660e13f7a499fdc796cb5cddbe,
     type: 3}
   maxLevel: 15
+  star: {fileID: 0}
+  starNow: 0
   textLevel: {fileID: 1981406271}
   gameOverPanel: {fileID: 2014234324}
   newHighScorePanel: {fileID: 1569176375}
@@ -758,6 +770,7 @@ MonoBehaviour:
   screenRight: 36
   screenLeft: -36
   player: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!60 &7833397004343258992
 PolygonCollider2D:
   m_ObjectHideFlags: 0
