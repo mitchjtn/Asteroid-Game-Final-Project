@@ -150,11 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5000
-  turnSpeed: -1000
+  turnSpeed: -1300
   deathForce: 7
   invul: 0
   score: 0
-  lives: 1
+  lives: 3
   screenTop: 20
   screenBottom: -20
   screenRight: 35
@@ -164,7 +164,9 @@ MonoBehaviour:
   gameOverPanel: {fileID: 0}
   newHighScorePanel: {fileID: 0}
   highScoreInput: {fileID: 0}
-  gm: {fileID: 6627673643830858345, guid: 0b9d0c16bc52e724da57285fb05deba3, type: 3}
+  highScoreListText: {fileID: 0}
+  gm: {fileID: 0}
+  cam: {fileID: 0}
   inColor: {r: 1, g: 1, b: 1, a: 0.50980395}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &6101501776161759784
