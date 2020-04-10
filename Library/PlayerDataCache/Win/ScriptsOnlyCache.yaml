@@ -3,9 +3,10 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Asteroid
     - BulletScript
-    - GameManager
+    - GameManagerScript
     - Shooting
     - SpaceshipControls
+    - StarScript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -58,31 +59,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11908}
     - Class: 114
-      Script: {instanceID: 11966}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12166}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 12570}
+      Script: {instanceID: 12364}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12610}
     - Class: 114
-      Script: {instanceID: 13220}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 13320}
+      Script: {instanceID: 13316}
+    - Class: 114
+      Script: {instanceID: 13326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -350,7 +353,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: bc7e5c04a78c0233cec2bfa5a5d876b7
+      Hash: e53cce54333a6c8896eea5046b50e3e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Asteroid
@@ -378,6 +381,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f46d9c27223c0bc605b3d0ba7fbd09c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManagerScript
   - hash:
       serializedVersion: 2
       Hash: d6fc8d3165070298511ec776ea575626
@@ -458,7 +467,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 8f296177b43f02ad14e4a56e08a18619
+      Hash: 8767fb726bca103ed3cbca4b795ae00d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shooting
@@ -512,6 +521,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: a021f5e8db6f53276dbb73b05827517c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StarScript
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -552,12 +567,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
-  - hash:
-      serializedVersion: 2
-      Hash: c06faaeddf77a6a58dd8c998449e5807
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -614,7 +623,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: a969cbc8d4d87697fc1b6ccdf5711492
+      Hash: 7176f075ed624b9171cb18e68f30beb6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpaceshipControls
@@ -657,5 +666,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/HP/Documents/Unity Project/game/teske2/Asteroid Game Final
-    Project.exe
+  playerPath: C:/Users/HP/Documents/Unity Project/game/0.4.3.1 ( fix bug level)/Asteroid
+    Game Final Project.exe

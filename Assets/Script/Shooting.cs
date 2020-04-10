@@ -7,7 +7,8 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     private float bulletForce = 50f;
-
+    public float delay = 10000f;
+    public float shootTime;
     SpaceshipControls sc;
 
     private void Start()
@@ -18,10 +19,13 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && sc.invul == false)
+        if ((Input.GetKey(KeyCode.Mouse0) ) && sc.invul == false && Time.time >= shootTime)
         {
+            shootTime = Time.time + delay;
             Shoot();
         }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0)) shootTime = Time.time;
            
     }
 
