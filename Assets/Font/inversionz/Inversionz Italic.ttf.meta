@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: caf2d624487c6cb44abc698ed4787f07
+guid: c487e475732b3f2408b97dc1fa56ba0e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,10 +8,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Gabriele Bad AH
+  fontName: Inversionz
   fontNames:
-  - Gabriele Bad AH
-  fallbackFontReferences: []
+  - Inversionz
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0192eaf4eac94174e9862f768f4777a9, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
