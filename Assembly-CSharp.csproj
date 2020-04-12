@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\Asteroid.cs" />
     <Compile Include="Assets\Script\BulletScript.cs" />
     <Compile Include="Assets\Script\GameManagerScript.cs" />
+    <Compile Include="Assets\Script\LeaderboadSystem.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
     <Compile Include="Assets\Script\Settings.cs" />
     <Compile Include="Assets\Script\Shooting.cs" />
