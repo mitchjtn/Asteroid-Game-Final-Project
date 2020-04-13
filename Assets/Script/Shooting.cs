@@ -24,6 +24,8 @@ public class Shooting : MonoBehaviour
             shootTime = Time.time + delay;
             Shoot();
         }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0)) shootTime = Time.time;
            
     }
 

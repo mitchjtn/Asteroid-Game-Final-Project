@@ -36,6 +36,7 @@ public class SpaceshipControls : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         score = 0;
         //lives = 3;

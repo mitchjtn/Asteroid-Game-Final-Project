@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8145708329638889487}
-  - component: {fileID: 6398870082638519538}
+  - component: {fileID: 3380158407956180812}
   m_Layer: 0
   m_Name: gameManager 1
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6398870082638519538
+--- !u!114 &3380158407956180812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,11 +45,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curNumAsteroid: 0
   level: 0
-  asteroidLarge: {fileID: 0}
-  asteroidMedium: {fileID: 0}
-  asteroidSmall: {fileID: 0}
-  waveNow: 1
-  maxLevel: 0
+  asteroidLarge: {fileID: 7319407076349965282, guid: b49f63a6227d2984aa567685c943932b,
+    type: 3}
+  asteroidMedium: {fileID: 1769286405220795487, guid: efdb8bd5f6c45624dbe4241d4b781743,
+    type: 3}
+  asteroidSmall: {fileID: 807708251196913511, guid: 7d94e1660e13f7a499fdc796cb5cddbe,
+    type: 3}
+  maxLevel: 15
+  star: {fileID: 22081296581742326, guid: f61da9bb5d194b247b89d55c69d60d0a, type: 3}
+  starNow: 0
   textLevel: {fileID: 0}
   gameOverPanel: {fileID: 0}
   newHighScorePanel: {fileID: 0}
