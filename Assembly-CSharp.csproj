@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CCA040F0-B061-E12C-BC9E-5E51CD81B174}</ProjectGuid>
+    <ProjectGuid>{DB56195E-91E8-0F17-2494-95139975911F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -74,43 +74,43 @@
     <Compile Include="Assets\Script\StarScript.cs" />
     <None Include="Assets\Font\gabriele_bad_ah\gabriele.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/HP/Documents/Unity Project/Final Project OOP/Asteroid Game Final Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
