@@ -32,7 +32,7 @@ public class Shooting : MonoBehaviour
     void Shoot()
     {
         //fire and make bullet
-        
+        FindObjectOfType<AudioManagerScript>().Play("Laser");
         GameObject newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
         rb.AddRelativeForce(Vector2.up * bulletForce, ForceMode2D.Impulse);

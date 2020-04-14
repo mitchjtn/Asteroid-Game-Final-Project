@@ -165,6 +165,22 @@ PrefabInstance:
       propertyPath: lives
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6024393427283600035, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024393427283600035, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a,
+        type: 3}
+      propertyPath: boost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024393427283600035, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a,
+        type: 3}
+      propertyPath: explode
+      value: 
+      objectReference: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+        type: 3}
     - target: {fileID: 6024393427283600040, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a,
         type: 3}
       propertyPath: m_Name
@@ -225,6 +241,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6024393427283600047, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e16fe1b4df4beb4e98c6bac4f233c3a, type: 3}
 --- !u!1 &328404018 stripped
@@ -281,7 +302,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.15205592, g: 0.15529203, b: 0.16037738, a: 0}
+  m_BackGroundColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -472,6 +493,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d08f26906af00740b7dcc6a860caf2d, type: 3}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[3].isSfx
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170159888323741685, guid: 9ade1f78064902748b494b79b895dd34,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ade1f78064902748b494b79b895dd34, type: 3}
@@ -722,7 +783,7 @@ PrefabInstance:
     - target: {fileID: 1819766337151467928, guid: e2b47c22283110a4a8a82f7643923067,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -23.99295
+      value: -23.992981
       objectReference: {fileID: 0}
     - target: {fileID: 1819766337291921492, guid: e2b47c22283110a4a8a82f7643923067,
         type: 3}

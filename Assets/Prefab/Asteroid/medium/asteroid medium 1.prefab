@@ -146,3 +146,4 @@ MonoBehaviour:
   screenBottom: -21
   screenRight: 36.5
   screenLeft: -36.5
+  explosion: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}

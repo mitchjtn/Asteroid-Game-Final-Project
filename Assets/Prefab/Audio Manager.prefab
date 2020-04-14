@@ -46,7 +46,25 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 51df7a8bcb08761459c103baec01b5c1, type: 3}
-    volume: 0.3
+    volume: 0.1
     pitch: 1
     loop: 1
+    isMusic: 1
+    isSfx: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 33cd429e81395944088573e40e271f18, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    isMusic: 0
+    isSfx: 1
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    isMusic: 0
+    isSfx: 1
     source: {fileID: 0}

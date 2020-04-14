@@ -13,6 +13,7 @@ public class SpaceshipControls : MonoBehaviour
     Vector2 mousePos;    
 
     public float deathForce = 5f;
+    public GameObject explode;
 
     public bool invul;
     public int score;
@@ -119,26 +120,26 @@ public class SpaceshipControls : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.relativeVelocity.magnitude);
-        if (collision.relativeVelocity.sqrMagnitude > deathForce * deathForce)
+        FindObjectOfType<AudioManagerScript>().Play("Death");
+        GameObject newExplode = Instantiate(explode, transform.position, Quaternion.identity);
+        Destroy(newExplode, 4f);
+        Debug.Log("Death");
+        lives--;
+        livesText.text = "Lives : " + lives;
+
+        //respawn
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        invul = true;
+        Invoke("Respawn", 2f);
+
+        if (lives <= 0)
         {
-            Debug.Log("Death");
-            lives--;
-            livesText.text = "Lives : " + lives;
-
-            //respawn
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<Collider2D>().enabled = false;
-            invul = true;
-            Invoke("Respawn", 2f);
-
-            if (lives <= 0)
-            {
-                //GameOver
-                CancelInvoke();
-                gm.GameOver(score);
-            }
+            //GameOver
+            CancelInvoke();
+            gm.GameOver(score);
         }
+        
     }
 
     public void SetNewHighScore()
