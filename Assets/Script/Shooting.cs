@@ -19,7 +19,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.Mouse0) ) && sc.invul == false && Time.time >= shootTime)
+        if ((Input.GetKey(KeyCode.Mouse0) ) && sc.invul == false && Time.time >= shootTime && PauseMenu.gameIsPaused == false)
         {
             shootTime = Time.time + delay;
             Shoot();
@@ -32,7 +32,7 @@ public class Shooting : MonoBehaviour
     void Shoot()
     {
         //fire and make bullet
-        
+        FindObjectOfType<AudioManagerScript>().Play("Laser");
         GameObject newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
         rb.AddRelativeForce(Vector2.up * bulletForce, ForceMode2D.Impulse);

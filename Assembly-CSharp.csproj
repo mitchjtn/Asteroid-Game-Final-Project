@@ -64,13 +64,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Asteroid.cs" />
+    <Compile Include="Assets\Script\AudioManagerScript.cs" />
     <Compile Include="Assets\Script\BulletScript.cs" />
     <Compile Include="Assets\Script\GameManagerScript.cs" />
     <Compile Include="Assets\Script\LeaderboadSystem.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Script\Parallax.cs" />
+=======
+    <Compile Include="Assets\Script\PauseMenu.cs" />
+>>>>>>> Mijo
     <Compile Include="Assets\Script\Settings.cs" />
     <Compile Include="Assets\Script\Shooting.cs" />
+    <Compile Include="Assets\Script\Sound.cs" />
     <Compile Include="Assets\Script\SpaceshipControls.cs" />
     <Compile Include="Assets\Script\StarScript.cs" />
     <None Include="Assets\Font\gabriele_bad_ah\gabriele.txt" />

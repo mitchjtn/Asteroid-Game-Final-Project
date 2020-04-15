@@ -23,8 +23,8 @@ public class Asteroid : MonoBehaviour
     public float screenRight = 37f;
     public float screenLeft = -37f;
 
-    public GameManagerScript gm;
-
+    private GameManagerScript gm;
+    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,10 +77,13 @@ public class Asteroid : MonoBehaviour
             //destroy bullet
             Destroy(other.gameObject);
 
+            GameObject newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManagerScript>().Play("Explosion");
             //split the asteroid
-            if(asteroidSize == 3) //large Asteroid
+            if (asteroidSize == 3) //large Asteroid
             {
                 //spawn 2 medium asteroid
+                newExplosion.transform.localScale *= 3;
                 Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
                 Instantiate(asteroidMedium, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
                 gm.UpdateNumberofAsteroid(1);
@@ -88,6 +91,7 @@ public class Asteroid : MonoBehaviour
             else if(asteroidSize == 2) //medium asteroid
             {
                 //spawn 2 small asteroid
+                newExplosion.transform.localScale *= 2;
                 Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse); 
                 Instantiate(asteroidSmall, transform.position, transform.rotation).GetComponent<Rigidbody2D>().AddForce(bulletSpeed * splitForce, ForceMode2D.Impulse);
                 gm.UpdateNumberofAsteroid(1);
@@ -97,6 +101,7 @@ public class Asteroid : MonoBehaviour
                 //destroy the asteroid
                 gm.UpdateNumberofAsteroid(-1);
             }
+            Destroy(newExplosion, 2f);
 
             //update score
             player.SendMessage("scorePoints", points);

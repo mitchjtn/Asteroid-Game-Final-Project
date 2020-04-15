@@ -72,7 +72,7 @@ public class GameManagerScript : MonoBehaviour
         curNumAsteroid += change;
 
         //check if there is no asteroid left
-        if (curNumAsteroid == 0 && asteroidLevelNow == maxAsteroidPerLevel)
+        if (curNumAsteroid == 0 && asteroidLevelNow >= maxAsteroidPerLevel)
         {
             //new Level
             StartNewLevel();

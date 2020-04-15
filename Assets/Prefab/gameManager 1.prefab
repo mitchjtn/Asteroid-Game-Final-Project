@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8145708329638889487}
   - component: {fileID: 3380158407956180812}
+  - component: {fileID: 6398870081374320539}
   m_Layer: 0
   m_Name: gameManager 1
   m_TagString: Untagged
@@ -52,11 +53,33 @@ MonoBehaviour:
   asteroidSmall: {fileID: 807708251196913511, guid: 7d94e1660e13f7a499fdc796cb5cddbe,
     type: 3}
   maxLevel: 15
+  maxAsteroidPerLevel: 0
+  asteroidLevelNow: 0
   star: {fileID: 22081296581742326, guid: f61da9bb5d194b247b89d55c69d60d0a, type: 3}
   starNow: 0
   textLevel: {fileID: 0}
+  lb: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  newHighScorePanel: {fileID: 0}
+  highScoreInput: {fileID: 0}
+  highScoreListText: {fileID: 0}
+  scoreText: {fileID: 0}
+--- !u!114 &6398870081374320539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8513463860864735442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19562c83a57ffec4ea74c4972bd03053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 0}
   newHighScorePanel: {fileID: 0}
   highScoreInput: {fileID: 0}
   player: {fileID: 0}
-  highScoreListText: {fileID: 0}
+  leaderboardPanel: {fileID: 0}
+  nameText: {fileID: 0}
+  scoreText: {fileID: 0}
