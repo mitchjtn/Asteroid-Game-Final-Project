@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - Assets.Plugins.ButtonSoundsEditor.ButtonClickSound
     Assembly-CSharp.dll:
     - Asteroid
     - BulletScript
@@ -64,35 +66,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 14272}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 14572}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 14826}
     - Class: 114
-      Script: {instanceID: 12166}
+      Script: {instanceID: 15022}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 15140}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 15220}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 15426}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 15460}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 15756}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 15764}
     - Class: 114
-      Script: {instanceID: 13318}
+      Script: {instanceID: 16160}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 16170}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,21 +131,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 14272}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 14572}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 15220}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 15756}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 16170}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -175,26 +177,32 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 14272}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 15220}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 15710}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 15756}
     - Class: 114
-      Script: {instanceID: 13258}
+      Script: {instanceID: 15806}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 16100}
+    - Class: 114
+      Script: {instanceID: 16170}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,6 +218,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/Settings.unity:
     - Class: 1
@@ -229,25 +243,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 14272}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 14312}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 14404}
     - Class: 114
-      Script: {instanceID: 11908}
+      Script: {instanceID: 14768}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 15220}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 15756}
     - Class: 114
-      Script: {instanceID: 13258}
+      Script: {instanceID: 16100}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 16170}
     - Class: 114
-      Script: {instanceID: 13366}
+      Script: {instanceID: 16208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -711,6 +725,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: a8e7a079e40765cc864d72b13259a897
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Assets.Plugins.ButtonSoundsEditor
+    className: ButtonClickSound
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -847,5 +867,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Settings.unity
   - Assets/Scenes/Leaderboard.unity
-  playerPath: C:/Users/HP/Documents/Unity Project/game/0.5.2.1 (fix bug screen size)/Asteroid
+  playerPath: C:/BLI - BINUS/Cawu 2.2/Object Oriented Programming/Unity/Asteroid-Game-Final-Project/Asteroid
     Game Final Project.exe

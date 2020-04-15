@@ -7,19 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //karna di Unity
-                                                                              // File > Build Settings, Scene Game ada
-                                                                              // di index 1
+       SceneManager.LoadScene("Game");
     }
 
     public void SettingGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2); // Scene Settings di index 2
+        SceneManager.LoadScene("Settings");
     }
 
     public void Leaderboard()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("Leaderboard");
     }
 
     public void QuitGame()
