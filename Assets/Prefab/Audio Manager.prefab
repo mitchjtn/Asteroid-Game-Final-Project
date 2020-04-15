@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1170159888323741685}
   m_Layer: 0
   m_Name: Audio Manager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 51df7a8bcb08761459c103baec01b5c1, type: 3}
-    volume: 0.1
+    volume: 0.2
     pitch: 1
     loop: 1
     isMusic: 1
@@ -62,9 +62,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Death
     clip: {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     isMusic: 0
     isSfx: 1
     source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 6d08f26906af00740b7dcc6a860caf2d, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    isMusic: 0
+    isSfx: 1
+    source: {fileID: 0}
+  musicVolumes: 1
+  sfxVolumes: 1

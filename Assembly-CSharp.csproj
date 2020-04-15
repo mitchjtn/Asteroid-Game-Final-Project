@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\GameManagerScript.cs" />
     <Compile Include="Assets\Script\LeaderboadSystem.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
+    <Compile Include="Assets\Script\PauseMenu.cs" />
     <Compile Include="Assets\Script\Settings.cs" />
     <Compile Include="Assets\Script\Shooting.cs" />
     <Compile Include="Assets\Script\Sound.cs" />

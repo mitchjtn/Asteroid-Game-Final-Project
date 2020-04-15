@@ -19,7 +19,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.Mouse0) ) && sc.invul == false && Time.time >= shootTime)
+        if ((Input.GetKey(KeyCode.Mouse0) ) && sc.invul == false && Time.time >= shootTime && PauseMenu.gameIsPaused == false)
         {
             shootTime = Time.time + delay;
             Shoot();

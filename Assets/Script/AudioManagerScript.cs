@@ -7,6 +7,12 @@ public class AudioManagerScript : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManagerScript instance;
+
+    [Range(0f, 1f)]
+    public float musicVolumes = 1f;
+    [Range(0f, 1f)]
+    public float sfxVolumes = 1f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,6 +41,10 @@ public class AudioManagerScript : MonoBehaviour
 
     private void Start()
     {
+        foreach(Sound s in sounds)
+        {
+            s.source.volume = 1f;
+        }
         Play("Theme");
     }
 
@@ -47,7 +57,9 @@ public class AudioManagerScript : MonoBehaviour
             Debug.Log("Sound " + s + "not found");
             return;
         }
-        s.source.Play();
+
+        if (PauseMenu.gameIsPaused == false)
+            s.source.Play();
     }
 
     public void Stop(string name)
@@ -59,5 +71,29 @@ public class AudioManagerScript : MonoBehaviour
             return;
         }
         s.source.Stop();
+    }
+
+    public void setMusicVolume(float volume)
+    {
+        foreach(Sound s in sounds)
+        {
+            if(s.isMusic == true)
+            {
+                musicVolumes = volume;
+                s.source.volume = volume;
+            }
+        }
+    }
+
+    public void setSFXVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.isSfx == true)
+            {
+                sfxVolumes = volume;
+                s.source.volume = volume;
+            }
+        }
     }
 }

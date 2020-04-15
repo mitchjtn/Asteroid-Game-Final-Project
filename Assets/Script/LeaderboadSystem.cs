@@ -38,14 +38,19 @@ public class LeaderboadSystem : MonoBehaviour
         {
             //Debug.Log("print");
 
-            nameText.text = ""; scoreText.text = "";
-            for (int i = 0; i < 5; i++)
-            {
-                //highScoreListText.text += scores[i].name + "  " + scores[i].score + "\n";
-                //Debug.Log(scores[i].name + " " + scores[i].score);
-                nameText.text += scores[i].name + "\n";
-                scoreText.text += scores[i].score + "\n";
-            }
+            PrintHighScore();
+        }
+    }
+
+    void PrintHighScore()
+    {
+        nameText.text = ""; scoreText.text = "";
+        for (int i = 0; i < 5; i++)
+        {
+            //highScoreListText.text += scores[i].name + "  " + scores[i].score + "\n";
+            //Debug.Log(scores[i].name + " " + scores[i].score);
+            nameText.text += scores[i].name + "\n";
+            scoreText.text += scores[i].score + "\n";
         }
     }
 
@@ -72,44 +77,57 @@ public class LeaderboadSystem : MonoBehaviour
         else
         {
             Debug.Log("else statement");
-            scores.Clear();
-            data defaultScore = new data
-            {
-                score = 10000,
-                name = "LORDMIJO"
-            };
-            scores.Add(defaultScore);
-
-            defaultScore = new data
-            {
-                score = 8000,
-                name = "LORDMIJO2"
-            };
-            scores.Add(defaultScore);
-
-            defaultScore = new data
-            {
-                score = 5000,
-                name = "LORDMIJO3"
-            };
-            scores.Add(defaultScore);
-
-            defaultScore = new data
-            {
-                score = 2000,
-                name = "LORDMIJO4"
-            };
-            scores.Add(defaultScore);
-
-            defaultScore = new data
-            {
-                score = 1000,
-                name = "LORDMIJO5"
-            };
-            scores.Add(defaultScore);
-            SetNewHighScore();
+            addDefaultScore();
         }
     }
+
+    void addDefaultScore()
+    {
+        scores.Clear();
+        data defaultScore = new data
+        {
+            score = 10000,
+            name = "LORDMIJO"
+        };
+        scores.Add(defaultScore);
+
+        defaultScore = new data
+        {
+            score = 8000,
+            name = "LORDMIJO2"
+        };
+        scores.Add(defaultScore);
+
+        defaultScore = new data
+        {
+            score = 5000,
+            name = "LORDMIJO3"
+        };
+        scores.Add(defaultScore);
+
+        defaultScore = new data
+        {
+            score = 2000,
+            name = "LORDMIJO4"
+        };
+        scores.Add(defaultScore);
+
+        defaultScore = new data
+        {
+            score = 1000,
+            name = "LORDMIJO5"
+        };
+        scores.Add(defaultScore);
+        SetNewHighScore();
+    }
+
+    public void clearHighScore()
+    {
+        addDefaultScore();
+        SetNewHighScore();
+        PrintHighScore();
+    }
+
     public void HighScoreInput()
     {
         string newInput = highScoreInput.text;
@@ -126,14 +144,7 @@ public class LeaderboadSystem : MonoBehaviour
     {
         gameOverPanel.SetActive(false);
         leaderboardPanel.SetActive(true);
-        nameText.text = ""; scoreText.text = "";
-        for (int i = 0; i < 5; i++)
-        {
-            //highScoreListText.text += scores[i].name + "  " + scores[i].score + "\n";
-            //Debug.Log(scores[i].name + " " + scores[i].score);
-            nameText.text += scores[i].name + "\n";
-            scoreText.text += scores[i].score + "\n";
-        }
+        PrintHighScore();
     }
 
     public void CloseLeaderboardPanel()
