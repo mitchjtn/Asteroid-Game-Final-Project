@@ -6,16 +6,6 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-<<<<<<< HEAD
-    public void setSFX(int volume)
-    {
-        
-    }
-
-    public void setMusic(int volume)
-    {
-
-=======
 
     public Slider musicSlider;
     public Slider sfxSlider;
@@ -26,7 +16,6 @@ public class Settings : MonoBehaviour
         AudioM = GameObject.FindWithTag("AudioManager");
         musicSlider.value = AudioM.GetComponent<AudioManagerScript>().musicVolumes;
         sfxSlider.value = AudioM.GetComponent<AudioManagerScript>().sfxVolumes;
->>>>>>> Mijo
     }
 
     public void Back()
