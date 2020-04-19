@@ -64,6 +64,7 @@ public class StarScript : MonoBehaviour
         {
             //update score
             player.SendMessage("scorePoints", points);
+            FindObjectOfType<AudioManagerScript>().Play("CollectStar");
             gm.updateStar(-1);
             Destroy(gameObject);
         }

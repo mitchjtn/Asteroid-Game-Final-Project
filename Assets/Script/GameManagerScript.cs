@@ -94,9 +94,7 @@ public class GameManagerScript : MonoBehaviour
         textLevel.enabled = true;
         textLevel.text = "Level " + level;
         Invoke("disableTextLevel", 3.5f);
-
         Invoke("SpawnAsteroid", 4f);
-
     }
 
     public void SpawnAsteroid()
@@ -154,16 +152,19 @@ public class GameManagerScript : MonoBehaviour
 
     public void Exit()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         Application.Quit();
     }
 
     public void PlayAgain()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("Game");
     }
 
     public void Menu()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("MainMenu");
     }
 }

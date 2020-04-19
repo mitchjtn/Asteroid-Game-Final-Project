@@ -1,6 +1,8 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
+using System.Collections;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -45,7 +47,7 @@ public class AudioManagerScript : MonoBehaviour
         {
             s.source.volume = 1f;
         }
-        Play("Theme");
+        Play("MainMenuMusic");
     }
 
     // Update is called once per frame

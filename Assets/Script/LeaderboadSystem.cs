@@ -7,9 +7,6 @@ using System.IO;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 
-
-
-
 public class LeaderboadSystem : MonoBehaviour
 {
     [Serializable]
@@ -150,6 +147,7 @@ public class LeaderboadSystem : MonoBehaviour
 
     public void CloseLeaderboardPanel()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         gameOverPanel.SetActive(true);
         leaderboardPanel.SetActive(false);
     }
@@ -177,6 +175,7 @@ public class LeaderboadSystem : MonoBehaviour
 
     public void Menu()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("MainMenu");
     }
 }

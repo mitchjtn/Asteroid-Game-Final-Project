@@ -20,6 +20,7 @@ public class Settings : MonoBehaviour
 
     public void Back()
     {
+        FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("MainMenu");
     }
 

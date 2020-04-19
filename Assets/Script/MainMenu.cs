@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        FindObjectOfType<AudioManagerScript>().Play("btn_click");
+       FindObjectOfType<AudioManagerScript>().Play("btn_click");
        SceneManager.LoadScene("Game");
     }
 
@@ -15,12 +15,14 @@ public class MainMenu : MonoBehaviour
     {
         FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("Background", LoadSceneMode.Additive);
     }
 
     public void Leaderboard()
     {
         FindObjectOfType<AudioManagerScript>().Play("btn_click");
         SceneManager.LoadScene("Leaderboard");
+        SceneManager.LoadScene("Background", LoadSceneMode.Additive);
     }
 
     public void QuitGame()
